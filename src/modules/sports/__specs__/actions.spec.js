@@ -1,0 +1,48 @@
+import {
+  FETCH_SPORTS_FAILURE,
+  FETCH_SPORTS_REQUEST,
+  FETCH_SPORTS_SUCCESS,
+} from '../constants';
+import {
+  fetchSportsFailure,
+  fetchSportsRequest,
+  fetchSportsSuccess,
+} from '../actions';
+
+describe('Sports module action creators', () => {
+  it('should create fetch sports request action', () => {
+    const expected = {
+      type: FETCH_SPORTS_REQUEST,
+    };
+
+    const action = fetchSportsRequest();
+    expect(action).toEqual(expected);
+  });
+
+  it('should create fetch sports success action', () => {
+    const games = [
+      { id: '0001', name: 'Liverpool - FC Barcelona' },
+      { id: '0001', name: 'Manchester United F.C. - FC Bayern Munich' },
+    ];
+
+    const expected = {
+      type: FETCH_SPORTS_SUCCESS,
+      payload: { games },
+    };
+
+    const action = fetchSportsSuccess(games);
+    expect(action).toEqual(expected);
+  });
+
+  it('should create fetch sports failure action', () => {
+    const message = 'Unable to obtain resource';
+
+    const expected = {
+      type: FETCH_SPORTS_FAILURE,
+      payload: { message },
+    };
+
+    const action = fetchSportsFailure(message);
+    expect(action).toEqual(expected);
+  });
+});
