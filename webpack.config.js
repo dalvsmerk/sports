@@ -20,14 +20,14 @@ module.exports = {
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
-    path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, 'public/dist/'),
+    publicPath: '/public/dist/',
     filename: 'bundle.js',
   },
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
-    publicPath: 'http://localhost:3000/dist/',
+    publicPath: 'http://localhost:3000/public/dist/',
     hotOnly: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
