@@ -2,6 +2,14 @@
   background: $white;
   min-width: 230px;
 
+  @include respond-to(mobile) {
+    min-width: 100vw;
+  }
+
+  @include respond-to(tablet) {
+    min-width: 50vw;
+  }
+
   &__heading {
     color: $grey;
     font-weight: 500;

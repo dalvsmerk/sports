@@ -3,10 +3,21 @@
   align-items: flex-start;
   justify-content: center;
 
+  @include respond-to(mobile) {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  @include respond-to(tablet) {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
   }
 
   &__loading,

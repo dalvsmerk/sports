@@ -6,3 +6,19 @@ $white: #ffffff;
 $green: #44db5e;
 $yellow: #f7e11d;
 $red: #f77686;
+
+// Breakpoints
+$max-mobile: 767px;
+$max-tablet: 1023px;
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $max-mobile) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $max-mobile + 1) and (max-width: $max-tablet) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $max-tablet + 1) { @content; }
+  }
+}

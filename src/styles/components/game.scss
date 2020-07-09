@@ -5,6 +5,14 @@
   text-align: center;
   width: 375px;
 
+  @include respond-to(mobile) {
+    width: 100vw;
+  }
+
+  @include respond-to(tablet) {
+    width: 48vw;
+  }
+
   &__country {
     color: $white;
     font-size: 10px;
@@ -63,7 +71,7 @@
   &__home,
   &__away {
     color: $white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     width: 30%;
   }
