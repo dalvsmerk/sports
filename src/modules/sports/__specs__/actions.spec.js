@@ -2,11 +2,14 @@ import {
   FETCH_SPORTS_FAILURE,
   FETCH_SPORTS_REQUEST,
   FETCH_SPORTS_SUCCESS,
+  GameFilters,
+  SELECT_SPORTS_FILTER,
 } from '../constants';
 import {
   fetchSportsFailure,
   fetchSportsRequest,
   fetchSportsSuccess,
+  selectSportsFilter,
 } from '../actions';
 
 describe('Sports module action creators', () => {
@@ -43,6 +46,18 @@ describe('Sports module action creators', () => {
     };
 
     const action = fetchSportsFailure(message);
+    expect(action).toEqual(expected);
+  });
+
+  it('should create select sports filter action', () => {
+    const filter = GameFilters.LIVE;
+
+    const expected = {
+      type: SELECT_SPORTS_FILTER,
+      payload: { filter },
+    };
+
+    const action = selectSportsFilter(filter);
     expect(action).toEqual(expected);
   });
 });

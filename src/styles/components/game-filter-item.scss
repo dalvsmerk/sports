@@ -1,0 +1,21 @@
+.game-filter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 21px;
+
+  &--active {
+    background: $lighter-grey;
+  }
+
+  &__label {
+    font-weight: 400;
+  }
+
+  &__count {
+    padding: 5px;
+    background: $grey;
+    color: $white;
+  }
+}

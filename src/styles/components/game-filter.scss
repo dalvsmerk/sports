@@ -1,0 +1,12 @@
+.game-filter {
+  background: $white;
+  min-width: 230px;
+
+  &__heading {
+    color: $grey;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 21px;
+    border-bottom: 1px solid black;
+  }
+}

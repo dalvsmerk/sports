@@ -1,14 +1,15 @@
 import React from 'react';
 import pt from 'prop-types';
 
+import { GameStatusType } from '../modules/sports';
 import { formatDate } from '../utils/formatting';
 import GameTime from './GameTime';
 
 const gameStatusPropType = pt.oneOf([
-  'inprogress',
-  'notstarted',
-  'finished',
-  'canceled',
+  GameStatusType.IN_PROGRESS,
+  GameStatusType.NOT_STARTED,
+  GameStatusType.FINISHED,
+  GameStatusType.CANCELLED,
 ]);
 
 export const gamePropType = pt.shape({
@@ -72,10 +73,10 @@ const Game = ({
 
 function statusToLabel(status, timestamp) {
   return {
-    inprogress: 'Live',
-    notstarted: formatDate(timestamp),
-    finished: 'Ended',
-    canceled: 'Cancelled',
+    [GameStatusType.IN_PROGRESS]: 'Live',
+    [GameStatusType.NOT_STARTED]: formatDate(timestamp),
+    [GameStatusType.FINISHED]: 'Ended',
+    [GameStatusType.CANCELLED]: 'Cancelled',
   }[status];
 }
 
