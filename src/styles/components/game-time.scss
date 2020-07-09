@@ -1,0 +1,30 @@
+.game-time {
+  width: 42px;
+  height: 42px;
+
+  &__circle {
+    stroke: $green;
+    stroke-dashoffset: 18;
+    transform: rotate(23deg);
+    transform-origin: center;
+  }
+
+  &__inner-circle {
+    stroke-width: 1;
+    stroke: $light-grey;
+  }
+
+  &__status {
+    font-size: 14px;
+    font-weight: 400;
+    text-anchor: middle;
+
+    &--passed {
+      fill: $green;
+    }
+
+    &--active {
+      fill: $white;
+    }
+  }
+}

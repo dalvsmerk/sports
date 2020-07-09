@@ -1,0 +1,10 @@
+@import "./lib/normalize.scss";
+
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "./components/index.scss";
+
+body {
+  background: $light-grey;
+  font-family: 'Barlow', sans-serif;
+}

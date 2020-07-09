@@ -2,8 +2,8 @@ import { Provider } from 'react-redux';
 import { hot } from 'react-hot-loader';
 import React from 'react';
 
+import { SportsContainer } from './containers';
 import { initStore } from './modules';
-import SportsContainer from './containers/SportsContainer';
 
 const store = initStore();
 

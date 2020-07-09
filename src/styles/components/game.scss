@@ -1,0 +1,82 @@
+.game {
+  background: $grey;
+  border: 1px solid $light-grey;
+  padding: 21px 0 27px 0;
+  text-align: center;
+  width: 375px;
+
+  &__country {
+    color: $white;
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__competition {
+    color: $white;
+    font-size: 14px;
+    line-height: 13px;
+    margin-bottom: 7px;
+    font-weight: 400;
+  }
+
+  &__status {
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    &--live {
+      color: $yellow;
+    }
+
+    &--not-started {
+      color: $white;
+    }
+
+    &--ended {
+      color: $green;
+    }
+
+    &--cancelled {
+      color: $red;
+    }
+  }
+
+  &__score {
+    color: $white;
+    font-size: 29px;
+    line-height: 29px;
+    margin-bottom: 17px;
+    font-weight: 500;
+  }
+}
+
+.game-competitors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__home,
+  &__away {
+    color: $white;
+    font-size: 20px;
+    font-weight: 400;
+    width: 30%;
+  }
+
+  &__home {
+    text-align: right;
+  }
+
+  &__away {
+    text-align: left;
+  }
+
+  &__time {
+    padding: 0 24px;
+  }
+}
